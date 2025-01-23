@@ -81,7 +81,8 @@ function greet(name: string) {
 
 Dès qu'un paramètre est annoté, les arguments de cette fonction seront vérifiés : 
 
-(img error)
+![Capture d’écran du 2025-01-22 10-51-53](https://github.com/user-attachments/assets/b9e91c6a-5b79-4236-834c-f15280ad0e8e)
+
 
 -- Même si on n'a pas d’annotation sur vos paramètres, TypeScript vérifiera également qu'on passe le nombre correct d'arguments lors de l'appel de la fonction.
 
@@ -124,7 +125,7 @@ Property 'toUppercase' does not exist on type 'string'. Did you mean 'toUpperCas
 });
 ```
 
-(img)
+![Capture d’écran du 2025-01-22 11-00-15](https://github.com/user-attachments/assets/bd0506e4-80f6-4b95-bd18-27b7b9bbca34)
 
 Même si `s` n'a pas d'annotation de type, TypeScript a utilisé le type de la fonction `forEach`, ainsi que le type inféré du tableau (qui est, donc, `string[]`), pour déterminer le type de `s`.
 
@@ -169,7 +170,7 @@ printName({ first: "Alice", last: "Alisson" });
 En JavaScript, accéder à une propriété qui n'existe pas retourne `undefined` au lieu d'une erreur. 
 De ce fait, quand on *lit* une propriété facultative, on devra vérifier qu'elle n'est pas undefined avant de continuer :
 
-(img)
+![Capture d’écran du 2025-01-22 11-31-33](https://github.com/user-attachments/assets/5758ed14-e6d6-4e83-95cf-d130c8e9970f)
 
 ## Types Union
 
@@ -183,7 +184,7 @@ Chacun des types de l'union est un *membre de cette union*.
 
 Écrivons une fonction qui peut agir sur un `number` ou sur un `string` :
 
-(img)
+![Capture d’écran du 2025-01-22 12-30-56](https://github.com/user-attachments/assets/154431e1-618a-451b-8b1b-ee2179818777)
 
 ### Utiliser les Types Union
 
@@ -193,7 +194,7 @@ Mais si on a une valeur dont le type est un type union, que faire ?
 TypeScript va permettre une opération *uniquement* si elle est valide pour tous les membres de l'union.
 Par exemple, si on a le type `string | number`, on ne peut pas utiliser les méthodes qui sont disponibles uniquement dans le type `string`:
 
-(img)
+![Capture d’écran du 2025-01-22 12-33-57](https://github.com/user-attachments/assets/9a2b0e41-9710-4d6e-a35b-3cfd514021d7)
 
 La solution est de *rétrécir* l'union avec du code, de la même façon qu'avec du code JavaScript sans annotation de types. 
 Le *rétrécissement* se produit quand TypeScript peut déduire un type plus spécifique pour une certaine valeur, en se basant sur la structure du code.
