@@ -247,6 +247,66 @@ la seule description commune qui s'applique à l'union de ces personnes (à tout
 
 ## Alias de Types
 
+Jusque-là, on a utilisé les types objet et types union en les écrivant directement dans les annotations de types.
+C'est convenable, mais on voudra souvent utiliser le même type plus d'une fois, et y référer avec un seul nom.
+Un *alias de type* est exactement cela - un *nom* pour un *type*. Voici la syntaxe d'un alias de type :
+
+```
+type Point = {
+  x: number;
+  y: number;
+};
+ 
+// Identique à l'exemple précédent
+function printCoord(pt: Point) {
+  console.log("La valeur de la coordonnée x est " + pt.x);
+  console.log("La valeur de la coordonnée y est " + pt.y);
+}
+ 
+printCoord({ x: 100, y: 100 });
+```
+
+On peut même utiliser les alias de types pour nommer toutes sortes de types, pas juste des types objet. Par exemple, un alias de type peut nommer un type union :
+
+```
+type ID = number | string;
+```
+
+Remarquer que les alias sont *uniquement* des alias - on ne peut pas utiliser d'alias pour créer des variantes / versions différentes d'un type déjà existant. 
+En utilisant le type alias, c'est comme si on avait écrit le type remplacé par l'alias. 
+En d'autres termes, ce code peut *paraître* illégal, mais TypeScript l'accepte parce que les deux types sont, en réalité, deux alias pour le même type :
+
+```
+type UserInputSanitizedString = string;
+ 
+function sanitizeInput(str: string): UserInputSanitizedString {
+  return sanitize(str);
+}
+ 
+// Aseptiser l'entrée reçue
+let userInput = sanitizeInput(getInput());
+ 
+// Peut toujours recevoir un string
+userInput = "new input";
+```
+
+## Interfaces
+
+Une *déclaration d'interface* est une autre façon de nommer un type objet :
+
+```
+interface Point {
+  x: number;
+  y: number;
+}
+ 
+function printCoord(pt: Point) {
+  console.log("La valeur de la coordonnée x est " + pt.x);
+  console.log("La valeur de la coordonnée y est " + pt.y);
+}
+ 
+printCoord({ x: 100, y: 100 });
+```
 
 
 
