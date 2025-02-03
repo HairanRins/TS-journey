@@ -9,5 +9,5 @@ function sumEvenNumbers(arr) {
     return sum;
 }
 // Exemple d'utilisation de la fonction 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 console.log("La somme des nombres pairs est : ", sumEvenNumbers(numbers));
