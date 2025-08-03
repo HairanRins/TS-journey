@@ -160,6 +160,27 @@ console.log(
 
 Pour démarrer un projet, vous devrez initialiser un projet Node.js (`npm init -y`), installer TypeScript (`npm install -g typescript`) et les bibliothèques nécessaires (ex: `npm install @tensorflow/tfjs @types/node`).
 
+| Cas d’usage                               | Bibliothèque TypeScript / JS                                    | Description                                          |
+| ----------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------- |
+| **Machine Learning (local)**              | [`TensorFlow.js`](https://github.com/tensorflow/tfjs)           | Exécute des modèles ML dans le navigateur ou Node.js |
+|                                           | [`Brain.js`](https://github.com/BrainJS/brain.js)               | Réseaux de neurones simples en JavaScript            |
+|                                           | [`Synaptic`](https://github.com/cazala/synaptic)                | Réseau de neurones modulaire                         |
+| **NLP**                                   | [`compromise`](https://github.com/spencermountain/compromise)   | Traitement du langage naturel léger                  |
+|                                           | [`natural`](https://github.com/NaturalNode/natural)             | NLP traditionnel (stemming, tokenization, etc.)      |
+| **Vision**                                | [`tracking.js`](https://github.com/eduardolundgren/tracking.js) | Détection d’objets et de visages dans le navigateur  |
+| **IA symbolique / logique / algorithmes** | [`logicjs`](https://github.com/mcsoto/logicjs)                  | Programmation logique en JS                          |
+| **Intégration IA (API)**                  | `openai`, `replicate`, `huggingface`, `gemini`                  | Intègre des modèles IA via API                       |
+
+| Repo GitHub                                                                           | Description                                               | Tech utilisée            |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------ |
+| [@tensorflow/tfjs-examples](https://github.com/tensorflow/tfjs-examples)              | Exemples de projets IA (image, texte, etc.) en TypeScript | TensorFlow\.js           |
+| [ml5-examples](https://github.com/ml5js/ml5-examples)                                 | IA simple pour créateurs (image, texte, sons)             | ml5.js (sur TF.js)       |
+| [Brain.js examples](https://github.com/BrainJS/brain.js#examples)                     | Classification, prédiction, training local simple         | Brain.js                 |
+| [Visage détection + reconnaissance](https://github.com/justadudewhohacks/face-api.js) | Reconnaissance faciale dans le navigateur                 | face-api.js (TS support) |
+| [nlp.js](https://github.com/axa-group/nlp.js)                                         | NLP multilingue pour bots, avec support TS                | NLP, Bot IA              |
+| [gpt-openai-chat](https://github.com/akshaybahadur21/ChatGPT-TS)                      | Intégration d'OpenAI GPT avec TypeScript                  | API GPT, TS, UI intégrée |
+
+
 En résumé, commencez par bien maîtriser les bases de TypeScript, puis explorez **TensorFlow.js** pour les applications de machine learning générales.
 Si vous débutez avec les réseaux de neurones ou si vos besoins sont plus simples, **Brain.js** est un excellent point de départ.
 Pour tout ce qui touche à l'analyse de texte, **Natural** est votre allié.
